@@ -7,6 +7,7 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
+    <!-- 
 <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
@@ -23,5 +24,5 @@
 
         <activity android:name=".ImgPreviewActivity"/>
     </application>
-
+ -->
 </manifest>
