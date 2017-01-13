@@ -1,4 +1,5 @@
 package net.nightwhistler.htmlspanner;
+import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
@@ -30,8 +31,16 @@ public class ImgPreviewActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_img_page);
         Bundle b = getIntent().getBundleExtra("b");
-        imgList = b.getStringArrayList("imglist");
-        mPosition=b.getInt("position");
+        if(b!=null){
+        	 imgList = b.getStringArrayList("imglist");
+             mPosition=b.getInt("position");
+        }
+       
+        if(imgList==null){
+        	imgList = new ArrayList<String>();
+        	imgList.add("http://images.enrz.com/wp-content/uploads/2017/01/15.jpg");
+        	mPosition = 0;
+        }
         inflater = LayoutInflater.from(this);
         initView();
         initViewPaper();
